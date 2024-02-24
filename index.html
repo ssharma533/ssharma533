@@ -22,6 +22,39 @@
     max-height: calc(100vh - 0px); /* Adjust the height as needed */
     overflow-y: auto;
   }
+      /* Style for the menu box */
+    .menu-box {
+      position: fixed;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 1000;
+    }
+    .menu-box a {
+      display: block;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .menu-box a:hover {
+      color: #008080;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Menu Box -->
+<div class="menu-box">
+  <a href="#work-experience">Work Experience</a>
+  <a href="#education">Education</a>
+  <a href="#projects">Projects</a>
+  <a href="#certifications">Certifications</a>
+</div>
+
 </style>
 </head>
 <body>
