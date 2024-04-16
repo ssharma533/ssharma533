@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: seneca-iot-deployment
+spec:
+  selector:
+    matchLabels:
+      app: iot
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: iot
+    spec:
+      containers:
+      - name: iot
+        image: ssharma533/seneca-iot-tml-kafka-amd64
+        ports:
+        - containerPort: 9005
+          hostPort: 9005
+        env:
+        - name: PREPROCESS_TYPES
+          value: "MIN,MAX,COUNT,VARIANCE,OUTLIERS,ANOMPROB"
